@@ -1,11 +1,9 @@
-export default function validation(code, setResult) {
-  if (typeof code === "number") {
-    let string = "" + code;
+import numberArr from "./numberArr";
 
-    if (string.length === 8) {
-      const codeStringArray = string.split("");
-      const codeArray = [];
-      codeStringArray.map((item) => codeArray.push(Number(item)));
+export default function validation(code) {
+  if (typeof code === "number") {
+    const codeArray = numberArr(code);
+    if (codeArray.length === 8) {
       return codeArray;
     } else {
       console.log("Промокод не действительный");
