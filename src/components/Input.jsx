@@ -15,7 +15,12 @@ export default function Input({ handler }) {
         value={value}
         onChange={inputHandler}
       ></input>
-      <button name="button" type="button" onClick={() => handler(value)}>
+      <button
+        name="button"
+        type="button"
+        onClick={() => handler(value)}
+        style={{ cursor: "pointer" }}
+      >
         Активировать промокод
       </button>
     </div>
